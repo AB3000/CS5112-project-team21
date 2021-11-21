@@ -1,7 +1,11 @@
 
+
+"""
+Brute force algorithm that searches for patten in block of text.
+Prints all matching starting indices where pattern is found. 
+Pulled from https://www.geeksforgeeks.org/naive-algorithm-for-pattern-searching/ 
+"""
 def brute_force_search(pat, txt):
-    print('test')
-    
     M = len(pat)
     N = len(txt)
  
@@ -21,7 +25,8 @@ def brute_force_search(pat, txt):
 
 
 if __name__ == "__main__":
-
     file = open('chimpanzee.txt', 'r')
     text = file.read()
+    pattern = "GCATACGC"
+    brute_force_search(pattern, text)
 
