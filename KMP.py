@@ -10,7 +10,6 @@ def kmp(pattern: str, text: str) -> bool:
 
         This tells us where to continue from if we get a mismatch between a character
         in our pattern and the text.
-
     2) Step through the text one character at a time and compare it to a character in
         the pattern updating our location within the pattern if necessary
 
@@ -59,17 +58,14 @@ def get_failure_array(pattern: str) -> List[int]:
 
 if __name__ == "__main__":
     ## Test 1)
-    #pattern = "abc1abc12"
-    #text1 = "alskfjaldsabc1abc1abc12k23adsfabcabc"
-    #text2 = "alskfjaldsk23adsfabcabc"
-    #assert kmp(pattern, text1) and not kmp(pattern, text2)
+    # pattern = "abc1abc12"
+    # text1 = "alskfjaldsabc1abc1abc12k23adsfabcabc"
+    # text2 = "alskfjaldsk23adsfabcabc"
+    # assert kmp(pattern, text1) and not kmp(pattern, text2)
 
-    file = open('chimpanzee.txt', 'r')
+    file = open("chimpanzee.txt", "r")
     text1 = file.read()
-    pattern = "GCATACGC"    
+    pattern = "GCATACGC"
     assert kmp(pattern, text1)
-    
-    
+
     # gotten from https://python.algorithms-library.com/strings/knuth_morris_pratt
-    
-    
