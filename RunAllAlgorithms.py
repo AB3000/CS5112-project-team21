@@ -1,6 +1,6 @@
 import time
 
-d = 4
+
 # Aho-Corasick algorithm for string matching: https://www.codespeedy.com/explain-the-aho-corasick-algorithm-for-pattern-searching-in-python/
 
 
@@ -276,7 +276,18 @@ def RunAllAlgorithms(file, pattern):
     return Times
 
 
+def CalculateD(file):
+    f = open(file, "r")
+    text = f.read()
+    List = []
+    for i in text:
+        if i not in file:
+            List.append(i)
+    return len(List)
+
+
 # Execute the code here
 file = "chimpanzee.txt"
 pattern = "GCATACGC"
+d = CalculateD(file)
 Times = RunAllAlgorithms(file, pattern)
