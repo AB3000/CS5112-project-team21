@@ -83,6 +83,24 @@ def chimp_little_substrings(txt):
 
 
 ##############################################################
+
+###################################################################
+def change_chimp_all_letters(txt):
+    
+    new_string = ""
+    choices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'
+    , 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    
+    for letter in txt:
+        print("letter")
+        random_letter = randint(0,25)
+        new_string += choices[random_letter]
+            
+    with open('Chimp_all_letters.txt', 'w', newline='') as file:
+        file.write(new_string)  
+##################################################################### 
+
+
 file = open('chimpanzee.txt', 'r')
 txt = file.read()
 
@@ -98,7 +116,7 @@ txt = file.read()
 
 #chimp_little_substrings(txt[40:])
 
-
+change_chimp_all_letters(txt)
 
 
 
@@ -109,4 +127,6 @@ txt = file.read()
 
 #modified_string = txt.replace('C', 'G')
 #return modified_string
+
+
 
