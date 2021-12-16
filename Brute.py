@@ -58,10 +58,10 @@ Cpattern = f2.read()
 repeats = 25
 
 ##Execute the code here
-file = "Chimp_A_then_Cs.txt"
-pattern = "AC"
-file2 = "Chimp_A_then_Cs.txt"
-pattern2 = "CA"
+file = "Chimps_Cs.txt"
+pattern = "CCCC"
+file2 = "Chimps_Cs.txt"
+pattern2 = "ABCD"
 d = CalculateD(file)
 for r in range(repeats):
     first_time = Brute(file, pattern)

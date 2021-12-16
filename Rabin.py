@@ -76,10 +76,11 @@ Cpattern = f2.read()
 repeats = 25
 
 ##Execute the code here
-file = "Chimp_A_then_Cs.txt"
-pattern = "AC"
-file2 = "Chimp_A_then_Cs.txt"
-pattern2 = "CA"
+file = "Chimp_Cs.txt"
+pattern = "C"
+file2 = "Chimp_Cs.txt"
+pattern2 = "CCCCCCCCCCCCC"
+
 d = CalculateD(file)
 for r in range(repeats):
     first_time = Rabin(file, pattern)
